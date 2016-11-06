@@ -1,4 +1,4 @@
-# aws.lambda
+# AWS lambda functions
 
 As full-stack developers, we need to sharpen our skills in many languages and techniques both on client and server side.
 
