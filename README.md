@@ -38,15 +38,15 @@ All you need to do is to configure your lambda functions with the AWS interface 
 Then you can continue working on new features or improve your current one’s, without worrying about all these infrastructure issues.
 
 
-From now on your code will be:
-- Highly secured on AWS servers.
-- Auto scale when needed
-- Run only when needed
-- Pay only when your code is running
-- Easy deployment of new versions
+From now on you will enjoy those features:
+- Your code will be highly secured on AWS servers
+- Your code will auto scale when needed
+- Your code will run only when needed
+- You will Pay only when your code is running (if you still don't have customers - you won't pay anything)
+- Very easy way deployment of new versions
 - Built-in monitoring with [cloudwatch](https://aws.amazon.com/cloudwatch/)
 - No downtime when deploying new versions
 
 
-AWS lambda functions have some disadvantages - but I personally think this kind of services will be the future of code deployments, and i think you should give it a try and test it by yourself.
+AWS lambda functions have some disadvantages - but I personally think this kind of services will be the future of code deployments, and  you should give it a try and test it by yourself.
 
