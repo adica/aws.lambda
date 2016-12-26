@@ -1,4 +1,4 @@
-# AWS lambda functions
+# AWS lambda functions introduction
 
 As full-stack developers, we need to sharpen our skills in many languages and techniques both on client and server side.
 
@@ -6,7 +6,7 @@ As full-stack developers, we need to sharpen our skills in many languages and te
 In addition - these days, to be a great developer it’s not enough, you also need to know how to deploy your code right.
 
 
-In AWS environment you need to learn how to:
+If you work on AWS environment you need to understand some techniques:
 - Launch [EC2 instance](https://aws.amazon.com/ec2/)
 - Configure this instance (decide the amount of memory, disk space, CPU etc.)
 - Deploy your code on it
@@ -41,12 +41,26 @@ Then you can continue working on new features or improve your current one’s, w
 From now on you will enjoy those features:
 - Your code will be highly secured on AWS servers
 - Your code will auto scale when needed
-- Your code will run only when needed
 - You will Pay only when your code is running (if you still don't have customers - you won't pay anything)
 - Very easy way deployment of new versions
 - Built-in monitoring with [cloudwatch](https://aws.amazon.com/cloudwatch/)
 - No downtime when deploying new versions
 
+Here is a simple example of Lambda function that triggered when someone put file on s3.
+
+![simple lambda function](http://rawdata.adicarmel.com.s3.amazonaws.com/tmp/lambda.png)
+
+You can see that AWS gives us simple function signature with 3 parameters:
+- event - the enevt that trigger this function
+- context - some data about the context this function run at
+- callback - to execute when we want to resolve it.
+
+This function do the following:
+- read the file name (line 12)
+- goes to s3 and retrive this file (line 17)
+- if there was no error - write back this file content type (line 26)
+
+As you can see - we don't need to worry about anything else then our logic - and this is very good news!
 
 AWS lambda functions have some disadvantages - but I personally think this kind of services will be the future of code deployments, and  you should give it a try and test it by yourself.
 
