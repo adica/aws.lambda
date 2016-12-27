@@ -1,7 +1,7 @@
 # AWS lambda functions introduction
 
 
-On 2015 Amazon introduce us [AWS Lambda functions](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html) - a serverless compute platform for stateless code execution in response to triggers.
+On 2015 Amazon introduces us [AWS Lambda functions](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html) - a serverless compute platform for stateless code execution in response to triggers.
 
 
 Basically - you can split your code into small stateless functions (microservices) that execute in response to triggers. Those triggers can be:
@@ -11,7 +11,7 @@ Basically - you can split your code into small stateless functions (microservice
 - New event on SQS (AWS queue system)
 
 
-When you use Lambda functions - you can reduce significantly server maintenance complexability (no need to launch server instance, configure it, handle scaling, monitoring, security, versioning ect.).
+When you use Lambda functions - you can reduce significantly server maintenance complexability (no need to launch server instance, configure it, handle scaling, monitoring, security, versioning etc.).
 
 Instead - all you need to do is to configure this functions with the AWS interface and deploy your code into it (just upload zip file).
 
@@ -26,21 +26,21 @@ From now on you will enjoy those features:
 - Very easy way to deploy new versions, and no downtimes
 - Built-in monitoring with [cloudwatch](https://aws.amazon.com/cloudwatch/)
 
-Here is a simple example of Lambda function that triggered when someone put file on s3.
+Here is a simple example of Lambda function that triggered when someone put a file on s3.
 
 ![simple lambda function](http://rawdata.adicarmel.com.s3.amazonaws.com/tmp/lambda.png)
 
 You can see that AWS gives us simple function signature with 3 parameters:
-- event - the enevt that trigger this function
+- event - the event that triggers this function
 - context - some data about the context this function run at
 - callback - to execute when we want to resolve it.
 
-This function do the following:
+This function does the following:
 - read the file name (line 12)
-- goes to s3 and retrive this file (line 17)
+- goes to s3 and retrieve this file (line 17)
 - if there was no error - write back this file content type (line 26)
 
-As you can see - we don't need to worry about anything else then our logic. this is very good news!
+As you can see - we don't need to worry about anything else than our logic. this is very good news!
 
 AWS lambda functions have some disadvantages (mostly latency issues)- but I personally think this kind of services will be the future of code deployments, and you should give it a try and test it by yourself.
 
