@@ -20,7 +20,7 @@ Then you can continue working on new features or improve your current one’s, w
 
 ## How to use AWS lambda
 
- AWS gives us simple function signature with 3 parameters that looks like that:
+ AWS gives us simple function signature with 3 parameters that look like that:
  
  ```javascript
  exports.handler = (event, context, callback) => {
@@ -31,7 +31,7 @@ Then you can continue working on new features or improve your current one’s, w
     // write your logic here
  };
  ```
-We only need to write our logic into this function. we can use any NPM package we want, and write our code like any other microservice on node enviroment (notice -lambda support many other [languages](http://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html) - but this is out of the scope of this post).
+We only need to write our logic into this function. we can use any NPM package we want, and write our code like any other microservice on node environment (notice -lambda support many other [languages](http://docs.aws.amazon.com/lambda/latest/dg/current-supported-versions.html) - but this is out of the scope of this post).
 
 
 ## Usage example
@@ -43,10 +43,10 @@ Here is a simple example of Lambda function that triggered when someone put a PD
 This function does the following:
 - read the file location from the event (lines 7-8)
 - goes to s3 bucket and retrieve this file (line 11)
-- use 'gm' (package that wraps 'image-magic' - a tool for image processing) to convert PDF to thumb PNG image (lines 15-18)
+- use 'gm' (a package that wraps 'image-magic' - a tool for image processing) to convert PDF to thumb PNG image (lines 15-18)
 - upload the thumb PNG image back to s3 bucket (line 22)
 
-And that's it! this code will be highly available and secured on AWS servers without the need to know how to setup and maintian servers.
+And that's it! this code will be highly available and secured on AWS servers without the need to know how to set up and maintain servers.
 
 ## Lambda benefits
 
