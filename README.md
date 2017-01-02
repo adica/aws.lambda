@@ -28,7 +28,7 @@ From now on you will enjoy those features:
 
 Here is a simple example of Lambda function that triggered when someone put a file on s3.
 
-![simple lambda function](http://rawdata.adicarmel.com.s3.amazonaws.com/tmp/lambda.png)
+![pdf-to-thumb lambda function](http://rawdata.adicarmel.com.s3.amazonaws.com/tmp/lambda-pdf-to-thumb.png)
 
 You can see that AWS gives us simple function signature with 3 parameters:
 - event - the event that triggers this function
@@ -36,9 +36,10 @@ You can see that AWS gives us simple function signature with 3 parameters:
 - callback - to execute when we want to resolve it.
 
 This function does the following:
-- read the file name (line 12)
-- goes to s3 and retrieve this file (line 17)
-- if there was no error - write back this file content type (line 26)
+- read the file location from the event (lines 7-8)
+- goes to s3 bucket and retrieve this file (line 11)
+- use 'gm' (package that wraps 'image-magic' - a tool for image processing) to convert PDF to thumb PNG image (lines 15-18)
+- upload the thumb PNG image back to s3 bucket (line 22)
 
 As you can see - we don't need to worry about anything else than our logic. this is very good news!
 
