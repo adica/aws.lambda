@@ -41,7 +41,7 @@ Here is a simple example of Lambda function that triggered when someone put a PD
 
 
 This function does the following:
-- read the file location from the event (lines 7-8)
+- read the file path and name from the event (lines 7-8)
 - goes to s3 bucket and retrieve this file (line 11)
 - use 'gm' (a package that wraps 'image-magic' - a tool for image processing) to convert PDF to thumb PNG image (lines 15-18)
 - upload the thumb PNG image back to s3 bucket (line 22)
