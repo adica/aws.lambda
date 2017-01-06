@@ -45,8 +45,11 @@ This function does the following:
 - goes to s3 bucket and retrieve this file (line 11)
 - use 'gm' (a package that wraps 'image-magic' - a tool for image processing) to convert PDF to thumb PNG image (lines 15-18)
 - upload the thumb PNG image back to s3 bucket (line 22)
+- use 'context.done' to resolve the function with or without an error
 
-And that's it! this code will be highly available and secured on AWS servers without the need to know how to set up and maintain servers.
+And that's it! 
+
+This code will be highly available and secured on AWS servers without the need to know how to set up and maintain servers.
 
 ## Lambda benefits
 
