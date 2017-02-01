@@ -4,19 +4,19 @@
 On 2015 Amazon introduces us [AWS Lambda functions](http://docs.aws.amazon.com/lambda/latest/dg/welcome.html) - a serverless compute platform for stateless code execution in response to triggers.
 
 
-Basically - you can split your code into small stateless functions (microservices) that execute in response to triggers. Those triggers can be:
+Basically - we split the code into small stateless functions (microservices) that execute in response to triggers. Those triggers can be:
 - HTTP request to specific end -point
 - File PUT event on s3 bucket
 - AWS SDK event call
 - New event on SQS (AWS queue system)
 
 
-When you use Lambda functions - you can reduce significantly server maintenance complexability (no need to launch server instance, configure it, handle scaling, monitoring, security, versioning etc.).
+When using Lambda functions - we reduce significantly server maintenance complexability (no need to launch server instance, configure it, handle scaling, monitoring, security, versioning etc.).
 
-Instead - all you need to do is to configure this functions with the AWS interface and deploy your code into it (just upload zip file).
+Instead - all we need to do is to configure this functions with the AWS interface and deploy the code into it (just by uploading zip file).
 
 
-Then you can continue working on new features or improve your current one’s, without worrying about all these infrastructure issues.
+Then continuing working on new features or improve current one’s, without worrying about all these infrastructure issues.
 
 ## How to use AWS lambda
 
@@ -51,13 +51,19 @@ And that's it!
 
 This code will be highly available and secured on AWS servers without the need to know how to set up and maintain servers.
 
-## Lambda benefits
+## Lambda pros
 
-- Your code will be highly secured on AWS servers
-- Your code will auto scale when needed
-- You will Pay only when your code is running (if you still don't have customers - you won't pay anything)
+- Our Code will be highly secured on AWS servers
+- Our code will auto scale when needed
+- We will Pay only when the code is running (when there are no customers - this service is free)
 - Very easy way to deploy new versions, and no downtimes
 - Built-in monitoring with [cloudwatch](https://aws.amazon.com/cloudwatch/)
+
+## Lambda cons
+- Not ideal for 'customer facing' service because there is still latency issue on execution time.
+- Locked into specific OS and Node version.
+- Works on a black box - if something went wrong it's hard to understand what happend.
+- Local enviroment can't be exact like Lambda.
 
 ## Summery
 AWS lambda functions have some disadvantages (mostly latency issues)- but I personally think this kind of services will be the future of code deployments, and you should give it a try and test it by yourself.
