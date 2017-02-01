@@ -62,7 +62,7 @@ This code will be highly available and secured on AWS servers without the need t
 ## Lambda cons
 - Not ideal for 'customer facing' service because there is still latency issue on execution time.
 - Locked into specific OS and Node version.
-- Works on a black box - if something went wrong it's hard to understand what happend.
+- Works on a black box - if something went wrong it's hard to understand what happened.
 - The local environment can't be exact like Lambda.
 
 ## Summery
