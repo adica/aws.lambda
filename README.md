@@ -63,7 +63,7 @@ This code will be highly available and secured on AWS servers without the need t
 - Not ideal for 'customer facing' service because there is still latency issue on execution time.
 - Locked into specific OS and Node version.
 - Works on a black box - if something went wrong it's hard to understand what happend.
-- Local enviroment can't be exact like Lambda.
+- The local environment can't be exact like Lambda.
 
 ## Summery
 AWS lambda functions have some disadvantages (mostly latency issues)- but I personally think this kind of services will be the future of code deployments, and you should give it a try and test it by yourself.
